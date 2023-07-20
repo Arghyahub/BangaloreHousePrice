@@ -41,17 +41,13 @@ def load_saved_artifacts():
 
 def get_location_names():
     if __locations==None:
-        return 100
-    else:
-        return __locations
+        load_saved_artifacts()
+    return __locations
 
 def get_data_columns():
+    if __data_columns==None:
+        load_saved_artifacts()
     return __data_columns
 
 if __name__ == '__main__':
     load_saved_artifacts()
-    print(get_location_names())
-    print(get_estimated_price('1st Phase JP Nagar',1000, 3, 3))
-    print(get_estimated_price('1st Phase JP Nagar', 1000, 2, 2))
-    print(get_estimated_price('Kalhalli', 1000, 2, 2)) # other location
-    print(get_estimated_price('Ejipura', 1000, 2, 2))  # other location
