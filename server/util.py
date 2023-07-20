@@ -40,7 +40,10 @@ def load_saved_artifacts():
     print("loading saved artifacts...done")
 
 def get_location_names():
-    return __locations
+    if __locations==None:
+        return 100
+    else:
+        return __locations
 
 def get_data_columns():
     return __data_columns
