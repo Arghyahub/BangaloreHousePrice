@@ -3,7 +3,6 @@ import "./App.css"
 
 import opName from "./columns";
 
-// import { useNavigate , Link } from "react-router-dom"
 import { socials , predictJson } from "./AppInterface";
 
 // -----------IMP-------------
@@ -59,13 +58,14 @@ const App = () => {
     useEffect(() => {
       const coldStart = async ():Promise<void> => {
         try{
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
           const resp:Response = await fetch(`${backend}/`,{
             method: 'GET',
             headers: {
               "Content-Type":'application/json'
             }
           })
+          const json = await resp.text() ;
+          console.log(json) ;
         }
         catch(err) {
           console.log(err) ;
