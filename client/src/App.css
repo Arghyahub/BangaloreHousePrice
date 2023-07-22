@@ -195,5 +195,12 @@
 
 .Predicted {
     margin-top: 2rem;
-    color: #dbdb5c;
+    color: #ffff59;
+}
+
+.head-txt {
+    position: relative;
+    top: -30px;
+    color: #3ed2ff;
+    text-align: center;
 }

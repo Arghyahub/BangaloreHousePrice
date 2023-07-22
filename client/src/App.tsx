@@ -100,7 +100,7 @@ const App = () => {
             })
 
             const data:predictJson = await resp.json();
-            setPredicted(`${data.estimated_price} Lakhs`) ;
+            setPredicted(`Price : ${data.estimated_price} Lakhs`) ;
         }
         catch(err) {
             console.log(err) ;
@@ -125,6 +125,8 @@ const App = () => {
       <div className="flcol homebg-div jcen acen f1">
         <img src={bgURL} alt="Home" className="homebg abs"/>
         
+        <h1 className="head-txt">Bangalore House Price Predictor</h1>
+
         <form onSubmit={getHouseData} className="flcol jcen acen price-form">
             <h3 className="w100">Area in SQFT</h3>
             <input name="area" type="text" placeholder="Area per SQFT" required/>
